@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kree8tal Digitals — Fill Your Calendar With High-Value Clients &amp; Customers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink:    #0C1A0F;
+    --forest: #0E3018;
+    --leaf:   #A8D833;
+    --white:  #F5F9EE;
+    --mist:   #D6E8BE;
+    --smoke:  #8FA87A;
+    --orange: #D4530A;
+    --border: rgba(168,216,51,0.18);
+    --card:   rgba(14,48,24,0.7);
+    --r:      10px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--ink);
+    color: var(--white);
+    line-height: 1.6;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(12,26,15,0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; color: var(--leaf); }
+  .header-tag {
+    font-size: 0.75rem; color: var(--smoke);
+    background: rgba(168,216,51,0.08); border: 1px solid var(--border);
+    border-radius: 99px; padding: 0.3rem 0.9rem; letter-spacing: 0.06em;
+  }
+  .header-phone {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.85rem; font-weight: 700; color: var(--leaf);
+    text-decoration: none; letter-spacing: 0.01em;
+    transition: opacity 0.15s;
+  }
+  .header-phone:hover { opacity: 0.8; }
+  @media (max-width: 560px) { .header-tag { display: none; } }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--forest) 0%, #071509 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 4.5rem 2rem 4rem; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 320px;
+    background: radial-gradient(ellipse, rgba(168,216,51,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(168,216,51,0.1); border: 1px solid var(--border);
+    border-radius: 99px; padding: 0.35rem 1.1rem;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--leaf); margin-bottom: 1.2rem;
+  }
+  .dot { width: 6px; height: 6px; background: var(--leaf); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.3rem, 5.4vw, 3.8rem);
+    letter-spacing: 0.02em; line-height: 1.08; color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .hero h1 span { color: var(--leaf); }
+  .hero-sub { font-size: 1rem; color: var(--mist); max-width: 540px; margin: 0 auto 2rem; line-height: 1.7; }
+
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--leaf); color: var(--ink);
+    font-weight: 700; font-size: 1rem; font-family: 'Inter', sans-serif;
+    padding: 1.05rem 2.2rem; border-radius: var(--r);
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 10px 30px rgba(168,216,51,0.25);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  }
+  .cta-btn:hover { transform: translateY(-2px); opacity: 0.92; box-shadow: 0 14px 34px rgba(168,216,51,0.32); }
+
+  .micro-trust { font-size: 0.75rem; color: var(--smoke); letter-spacing: 0.03em; margin-top: 0.9rem; }
+
+  /* ── SECTION SHELL ── */
+  .section { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 1; }
+  .section-eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--leaf); text-align: center; margin-bottom: 0.7rem;
+  }
+  .section-heading {
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+    text-align: center; color: var(--white); margin-bottom: 0.8rem; line-height: 1.15;
+  }
+  .section-sub { text-align: center; color: var(--mist); font-size: 0.95rem; max-width: 500px; margin: 0 auto 2.6rem; line-height: 1.65; }
+
+  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── PROBLEM ── */
+  .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 620px) { .problem-grid { grid-template-columns: 1fr; } }
+  .problem-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+    padding: 1.1rem 1.3rem;
+  }
+  .problem-icon { font-size: 1.2rem; flex-shrink: 0; }
+  .problem-item p { font-size: 0.9rem; color: var(--mist); line-height: 1.55; }
+  .problem-item strong { color: var(--white); }
+
+  /* ── PROCESS ── */
+  .process-list { display: flex; flex-direction: column; }
+  .process-step { display: flex; gap: 1.5rem; padding: 1.4rem 0; border-top: 1px solid var(--border); }
+  .process-step:first-child { border-top: none; }
+  .process-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--leaf);
+    flex-shrink: 0; width: 56px; padding-top: 0.1rem;
+  }
+  .process-text h4 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+  .process-text p { font-size: 0.88rem; color: var(--mist); line-height: 1.6; max-width: 560px; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.8rem;
+    padding: 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    position: relative; z-index: 1;
+  }
+  .trust-bar-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--mist); }
+
+  /* ── STATS ── */
+  .stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; text-align: center; }
+  @media (max-width: 620px) { .stats-row { grid-template-columns: 1fr; } }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.5rem 1rem; }
+  .stat-num { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--leaf); }
+  .stat-label { display: block; font-size: 0.76rem; color: var(--smoke); margin-top: 0.3rem; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  @media (max-width: 680px) { .testimonial-grid { grid-template-columns: 1fr; } }
+  .testimonial-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 1.6rem 1.5rem; }
+  .stars { color: var(--leaf); font-size: 0.9rem; margin-bottom: 0.7rem; }
+  .testimonial-quote { font-size: 0.9rem; color: var(--mist); line-height: 1.6; font-style: italic; margin-bottom: 0.9rem; }
+  .testimonial-author { font-size: 0.8rem; color: var(--white); font-weight: 600; }
+  .sample-tag {
+    display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--orange); border: 1px solid rgba(212,83,10,0.4);
+    border-radius: 4px; padding: 0.15rem 0.5rem; margin-bottom: 0.8rem;
+  }
+  .testimonial-role { font-size: 0.75rem; color: var(--smoke); }
+
+  /* ── FAQ ── */
+  .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 0.9rem 1.2rem; margin-bottom: 0.6rem; }
+  .faq-item summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; color: var(--white); list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: '+ '; color: var(--leaf); font-weight: 700; }
+  .faq-item[open] summary::before { content: '– '; }
+  .faq-item p { font-size: 0.87rem; color: var(--mist); line-height: 1.6; margin-top: 0.7rem; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    max-width: 900px; margin: 0 auto 3rem; padding: 3.5rem 2rem 4rem; text-align: center;
+    background: linear-gradient(180deg, var(--forest) 0%, #071509 100%);
+    border-radius: 16px; border: 1px solid var(--border); position: relative; z-index: 1;
+  }
+  .final-cta h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 3.8vw, 2.5rem); color: var(--white); margin-bottom: 0.8rem; }
+  .final-cta p { color: var(--mist); max-width: 460px; margin: 0 auto 1.8rem; font-size: 0.95rem; }
+
+  footer {
+    max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 3rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem;
+    border-top: 1px solid var(--border); position: relative; z-index: 1;
+  }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--leaf); }
+  .footer-copy { font-size: 0.75rem; color: var(--smoke); }
+  .footer-copy a { text-decoration: none; color: var(--smoke); border-bottom: 1px solid transparent; }
+  .footer-copy a:hover { color: var(--leaf); border-color: var(--leaf); }
+
+  /* ── SALES ALERT TOAST ── */
+  .sales-alert {
+    position: fixed; left: 1.2rem; bottom: 1.2rem; z-index: 100;
+    max-width: 300px;
+    background: var(--forest); border: 1px solid var(--border); border-radius: var(--r);
+    padding: 0.85rem 1rem; display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transform: translateY(20px); opacity: 0; pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .sales-alert.show { transform: translateY(0); opacity: 1; }
+  .sales-alert-icon {
+    width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+    background: rgba(168,216,51,0.15); display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .sales-alert-text { font-size: 0.8rem; color: var(--mist); line-height: 1.4; }
+  .sales-alert-text strong { color: var(--white); }
+  @media (max-width: 480px) { .sales-alert { left: 0.7rem; right: 0.7rem; max-width: none; bottom: 0.7rem; } }
+</style>
+
+<!-- Meta Pixel base code — fires PageView on every visit. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body>
+
+<header>
+  <span class="logo">KREE8TAL DIGITALS</span>
+  <div style="display:flex; align-items:center; gap:0.9rem;">
+    <a href="tel:+2347018310455" class="header-phone" onclick="if(window.fbq){fbq('track','Contact');}">📞 +234 701 8310 455</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow"><div class="dot"></div> For Founders, B2B Brands &amp; Business Owners / 2026 Scale Season</div>
+    <h1>Copy &amp; Paste This AI Customer-Generating System <span>And Fill Your Calendar With Qualified High-Value Customers.</span></h1>
+    <p class="hero-sub">In 30 days, our performance-driven customer-generating system puts serious, pre-verified clients, buyers, and corporate partners directly on your calendar &mdash; so you spend less time chasing cold leads and more time closing sales.</p>
+    <a href="https://kree8taldigitals-source.github.io/kree8talleadform/" class="cta-btn">Claim Your Free 30-Minute Strategy Session →</a>
+    <p class="micro-trust">FREE ASSESSMENT · 100% PRIVACY GUARANTEED · NO RISK</p>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="section fade-in">
+  <p class="section-eyebrow">Sound Familiar?</p>
+  <h2 class="section-heading">Most Business Owners Are Losing Revenue Before The First Discovery Call</h2>
+  <p class="section-sub">Not because your product or service is weak &mdash; because your acquisition pipeline is broken.</p>
+  <div class="problem-grid">
+    <div class="problem-item"><span class="problem-icon">💸</span><p><strong>Wasted ad spend</strong> on broad marketing campaigns that bring low-ticket tire-kickers instead of verified buyers.</p></div>
+    <div class="problem-item"><span class="problem-icon">💬</span><p><strong>Manually chasing leads</strong> over DM and email with no system to filter out people who lack the budget to afford you.</p></div>
+    <div class="problem-item"><span class="problem-icon">🐢</span><p><strong>Losing market share to competitors</strong> who simply engage and sign up ready-to-buy prospects faster than you do.</p></div>
+    <div class="problem-item"><span class="problem-icon">📉</span><p><strong>No AI tracking</strong> to separate immediate conversion opportunities from casual browsers until you've already wasted hours on calls.</p></div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section fade-in">
+  <p class="section-eyebrow">The Kree8tal System</p>
+  <h2 class="section-heading">How We Fill Your Pipeline</h2>
+  <p class="section-sub">One end-to-end system, built and fully managed for you &mdash; from the first impression to the booked consultation.</p>
+  <div class="process-list">
+    <div class="process-step">
+      <span class="process-num">01</span>
+      <div class="process-text">
+        <h4>We Build Hyper-Targeted Ad Campaigns</h4>
+        <p>Reaching decision-makers, high-intent consumers, and brands actively looking to procure your solutions right now &mdash; avoiding generic traffic.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">02</span>
+      <div class="process-text">
+        <h4>We Vet Every Prospect with AI</h4>
+        <p>Budget requirements, timeline readiness, exact needs, and purchase intent are screened upfront &mdash; so you only talk to real buyers.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">03</span>
+      <div class="process-text">
+        <h4>We Book Them Straight Into Your Calendar</h4>
+        <p>Qualified leads and customers schedule a breakthrough session or demo directly &mdash; ending the endless back-and-forth messaging.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">04</span>
+      <div class="process-text">
+        <h4>We Optimize For Conversions Monthly</h4>
+        <p>We scale high-performing target segments and cut out poor placements &mdash; consistently lowering your customer acquisition costs over time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar fade-in">
+  <div class="trust-bar-item">📊 Transparent reporting, every campaign</div>
+  <div class="trust-bar-item">🤝 Dedicated client growth manager</div>
+  <div class="trust-bar-item">📅 Fast setup &mdash; live within days</div>
+  <div class="trust-bar-item">🚫 No long-term lock-in contracts</div>
+</div>
+
+<!-- STATS -->
+<div class="section fade-in">
+  <div class="stats-row">
+    <div class="stat-card"><span class="stat-num">25+</span><span class="stat-label">Brands &amp; Businesses Served</span></div>
+    <div class="stat-card"><span class="stat-num">4,800+</span><span class="stat-label">Qualified Inbound Leads</span></div>
+    <div class="stat-card"><span class="stat-num">52%</span><span class="stat-label">Avg. Reduction In Cost Per Booking</span></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section fade-in">
+  <p class="section-eyebrow">What Business Owners Say</p>
+  <h2 class="section-heading">Real Results, Scaled Revenue</h2>
+  <p class="section-sub">Hear directly from founders and directors who automated their customer pipeline.</p>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"Before working with Kree8tal, we were manually chasing down tire-kickers on social media who vanished when it came time to pay. Within 30 days of launching their AI system, our calendar was packed with 42 high-intent clients who had the capital ready for our premium packages. Our customer acquisition cost dropped by 45%!"</p>
+      <p class="testimonial-author">Chidi Okafor</p>
+      <p class="testimonial-role">Global Pathways Solutions</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"The peak sales quarter used to mean pure chaos and massive ad waste. Kree8tal built an AI filter that weeds out unverified prospects based on their budget and business size before they can even book a demo. We went from hundreds of dead-end chats to closing 18 high-value contracts this month alone."</p>
+      <p class="testimonial-author">Amara Eke</p>
+      <p class="testimonial-role">Apex Digital Group</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section fade-in">
+  <p class="section-eyebrow">Questions</p>
+  <h2 class="section-heading">Frequently Asked Questions</h2>
+  <details class="faq-item">
+    <summary>Who is this customer-generating system NOT for?</summary>
+    <p>This system is not for brand-new startups without a validated product or service, or businesses without a baseline marketing budget to fund ad placements. If you do not have a clear value proposition or a proven offer that customers already buy, this specialized targeting framework will not yield optimal results.</p>
+  </details>
+  <details class="faq-item">
+    <summary>How fast will I start seeing client leads?</summary>
+    <p>Most business owners see their first verified prospects within the first 1&ndash;2 weeks of launching campaigns, with booking quality increasing as the AI optimizes.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Do I need a massive marketing budget to start?</summary>
+    <p>No. We tailor the targeting framework to the specific tier of offers you manage, and map out exactly what kind of volume to expect given your current budget.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What if I am a solo founder or small firm?</summary>
+    <p>That is completely fine &mdash; our free session is designed to look at your current operational model and establish a high-leverage strategy that fits your team's capacity to deliver solutions.</p>
+  </details>
+  <details class="faq-item">
+    <summary>How is this different from regular job or listing marketplaces?</summary>
+    <p>Public marketplaces put your brand right next to thousands of competing bids. Our system captures exclusive intent, uses AI filters to qualify prospects before they talk to you, and drops them directly onto your schedule &mdash; it builds your personal pipeline, not someone else's platform.</p>
+  </details>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta fade-in">
+  <h2>Your Next Sales Quarter Doesn't Have To Be Confusing Or Difficult</h2>
+  <p>Start with a free growth session and see exactly how many pre-qualified customers your market can generate.</p>
+  <a href="https://kree8taldigitals-source.github.io/kree8talleadform/" class="cta-btn">Claim Your Free 30-Minute Strategy Session →</a>
+  <p class="micro-trust">FREE ASSESSMENT · 100% PRIVACY GUARANTEED · NO RISK</p>
+</div>
+
+<footer>
+  <span class="footer-logo">KREE8TAL DIGITALS</span>
+  <span class="footer-copy">© 2025 Kree8tal Digitals · <a href="#">Privacy Policy</a></span>
+</footer>
+
+<div class="sales-alert" id="sales-alert">
+  <div class="sales-alert-icon">🔔</div>
+  <div class="sales-alert-text" id="sales-alert-text">Loading…</div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── SALES ALERT (honest version) ──
+  (function salesAlert() {
+    const el = document.getElementById('sales-alert');
+    const textEl = document.getElementById('sales-alert-text');
+    if (!el || !textEl) return;
+
+    let messages = [];
+    try {
+      const crm = JSON.parse(localStorage.getItem('crm_leads') || '[]');
+      messages = crm
+        .filter(l => l.fullName)
+        .slice(0, 5)
+        .map(l => {
+          const firstName = l.fullName.split(' ')[0];
+          return '<strong>' + firstName + '</strong> just requested a free growth session.';
+        });
+    } catch (err) {
+      console.warn('Sales alert: could not read lead data', err);
+    }
+
+    if (messages.length === 0) {
+      messages = ['Growth sessions are booking up for this intake — <strong>spots are limited.</strong>'];
+    }
+
+    let i = 0;
+    function showNext() {
+      textEl.innerHTML = messages[i % messages.length];
+      el.classList.add('show');
+      setTimeout(() => { el.classList.remove('show'); }, 6000);
+      i++;
+    }
+
+    setTimeout(showNext, 3000);
+    setInterval(showNext, 14000);
+  })();
+</script>
+</body>
+</html>
